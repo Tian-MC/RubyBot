@@ -1,0 +1,5 @@
+# RubyBot
+This is my first discord bot
+
+
+ATTENTION: LOG IN TO YOUR ACCOUNT WHEN YOU WANT TO INSERT THE BOT
