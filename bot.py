@@ -1,10 +1,16 @@
 import discord
 from discord.ext import commands
-import ffmpeg
+import os
+from dotenv import load_dotenv
 
 intents = discord.Intents.all()
 
-TOKEN = 'MTIwNTIxMTgzNjc0NDQ3MDU4OQ.GbRwgw.FS5EehVWSxdGNDPdL_Vq5Z2Zs12YnzxQGNfyHk'
+load_dotenv()
+
+TOKEN = os.getenv('DISCORD_TOKEN')
+
+if TOKEN is None:
+    raise ValueError('TOKEN environment variable is not set')
 
 bot = commands.Bot(command_prefix='.', intents=intents, status=discord.Status.dnd, activity=discord.Game('with your data!'), help_command=None)
 
