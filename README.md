@@ -1,5 +1,4 @@
 # RubyBot
-This is my first discord bot
 
-
-ATTENTION: LOG IN TO YOUR ACCOUNT WHEN YOU WANT TO INSERT THE BOT
+# How to get your Token!
+To get your token, you need to go on [this website](https://discord.com/developers/applications)
