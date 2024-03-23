@@ -1,5 +1,8 @@
 # RubyBot
 This is my first bot written in python **3.9**
+
+# THIS ISN'T FINISHED, SO EDIT THE PERMISSIONS ON IT!
+
 # How to get your Token!
 - To get your token, you need to go on [this website](https://discord.com/developers/applications)
 - Now go on your application or create a new one
@@ -10,4 +13,4 @@ This is my first bot written in python **3.9**
 - Any server like vps, are efficient.
 - Discord.py `pip install discord.py`
 - DotEnv `pip install python-dotenv`
-- 
+- Asyncio `pip install asyncio`
