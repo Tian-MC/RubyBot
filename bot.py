@@ -3,7 +3,7 @@ from discord.ext import commands
 
 intents = discord.Intents.all()
 
-TOKEN = 'MTIwNTIxMTgzNjc0NDQ3MDU4OQ.GmpJ6P.fC2fhapSYs8mDlXZIe2AGMT0JeYgG_pd9Xz1_I'
+TOKEN = 'YOUR_BOT_TOKEN'
 
 bot = commands.Bot(command_prefix='.', intents=intents, status=discord.Status.dnd, activity=discord.Game('with your data!'))
 
