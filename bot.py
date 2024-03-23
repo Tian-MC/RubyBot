@@ -21,7 +21,6 @@ async def help(ctx):
     embed.add_field(name='.kick <member> <reason>', value='Kicks the specified member', inline=False)
     embed.add_field(name='.mute <member> <reason>', value='Mutes the specified member', inline=False)
     embed.add_field(name='.unmute <member>', value='Unmutes the specified member', inline=False)
-
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -59,12 +58,5 @@ async def unban(ctx, *, member):
 async def kick(ctx, member: discord.Member, *, reason=None):
     await member.kick(reason=reason)
     await ctx.send(f'{member} has been kicked')
-
-@bot.command()
-async def mute(ctx, member: discord.Member, *, reason=None):
-    muted_role = ctx.guild.get_role(820521183674447058)
-    await member.add_roles(muted_role, reason=reason)
-
-
-
+        
 bot.run(TOKEN)
