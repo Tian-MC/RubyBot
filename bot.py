@@ -15,7 +15,7 @@ intents = discord.Intents.all()
 load_dotenv()
 
 #========================================================================
-#            Make an .env file with the following content:
+#       Make sure to make an .env file with the following content:
 #               DISCORD_TOKEN: <your_discord_bot_token>
 #========================================================================
 
