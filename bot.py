@@ -81,7 +81,7 @@ async def clear(ctx, amount: int = None):
 
 # Command to ban a member
 @bot.command()
-@commands.has_permissions(ban_members=True, kick_members=True)
+@commands.has_permissions(ban_members=True)
 async def ban(ctx, member: discord.Member=None, *, reason=None):
     if member is None:
         await ctx.send("Please specify the member you want to ban.")
@@ -93,7 +93,7 @@ async def ban(ctx, member: discord.Member=None, *, reason=None):
 
 # Command to unban a member
 @bot.command()
-@commands.has_permissions(ban_members=True, kick_members=True)
+@commands.has_permissions(ban_members=True)
 async def unban(ctx, *, member=None):
     if member is None:
         await ctx.send("Please specify the banned user you want to unban.")
@@ -116,6 +116,7 @@ async def unban(ctx, *, member=None):
 
 # Command to kick a member
 @bot.command()
+@commands.has_permissions(kick_members=True)
 async def kick(ctx, member: discord.Member=None, *, reason=None):
     if member is None:
         await ctx.send("Please specify the member you want to kick.")
@@ -127,6 +128,7 @@ async def kick(ctx, member: discord.Member=None, *, reason=None):
 
 # Command to mute a member
 @bot.command()
+@commands.has_permissions(manage_roles=True)
 async def mute(ctx, member: discord.Member=None, *, reason=None):
     if member is None:
         await ctx.send("Please specify the member you want to mute.")
@@ -151,6 +153,7 @@ async def mute(ctx, member: discord.Member=None, *, reason=None):
 
 # Command to unmute a member
 @bot.command()
+@commands.has_permissions(manage_roles=True)
 async def unmute(ctx, member: discord.Member=None):
     if member is None:
         await ctx.send("Please specify the member you want to unmute.")
