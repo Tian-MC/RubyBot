@@ -146,5 +146,26 @@ async def mute(ctx, member: discord.Member=None, *, reason=None):
     except discord.Forbidden:
         await ctx.send("I don't have permission to mute members. Please check my permissions.")
 
+# Command to unmute a member
+@bot.command()
+async def unmute(ctx, member: discord.Member=None):
+    if member is None:
+        await ctx.send("Please specify the member you want to unmute.")
+        return
+    
+    # Get the "Muted" role
+    muted_role = discord.utils.get(ctx.guild.roles, name='Muted')
+
+    if not muted_role:
+        await ctx.send("The 'Muted' role does not exist.")
+        return
+
+    try:
+        # Remove the "Muted" role from the member
+        await member.remove_roles(muted_role)
+        await ctx.send(f'{member} has been unmuted')
+    except discord.Forbidden:
+        await ctx.send("I don't have permission to unmute members. Please check my permissions.")
+
 # Run the bot with the specified token
 bot.run(TOKEN)
