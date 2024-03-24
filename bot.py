@@ -56,6 +56,7 @@ async def ping(ctx):
 
 # Command to clear messages
 @bot.command()
+@commands.has_permissions(manage_messages=True)
 async def clear(ctx, amount: int = None):
     if amount is None:
         await ctx.send("Please specify the amount of messages you want to clear.")
@@ -80,6 +81,7 @@ async def clear(ctx, amount: int = None):
 
 # Command to ban a member
 @bot.command()
+@commands.has_permissions(ban_members=True, kick_members=True)
 async def ban(ctx, member: discord.Member=None, *, reason=None):
     if member is None:
         await ctx.send("Please specify the member you want to ban.")
@@ -91,6 +93,7 @@ async def ban(ctx, member: discord.Member=None, *, reason=None):
 
 # Command to unban a member
 @bot.command()
+@commands.has_permissions(ban_members=True, kick_members=True)
 async def unban(ctx, *, member=None):
     if member is None:
         await ctx.send("Please specify the banned user you want to unban.")
