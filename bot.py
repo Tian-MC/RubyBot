@@ -16,7 +16,7 @@ load_dotenv()
 
 #========================================================================
 #       Make sure to make an .env file with the following content:
-#               DISCORD_TOKEN: <your_discord_bot_token>
+#                  DISCORD_TOKEN=YOUR_DISCORD_TOKEN
 #========================================================================
 
 # Get the Discord token from environment variable
