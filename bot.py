@@ -10,7 +10,6 @@ import asyncio
 
 # Set up Discord intents
 intents = discord.Intents.all()
-
 # Load environment variables from .env file
 load_dotenv()
 
